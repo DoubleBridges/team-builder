@@ -8,13 +8,9 @@ const TeamMember = (props) => {
         <section>
             <h4>Favorite Language</h4>
             <p>{props.favLang}</p>
-            <span>Click to Edit</span>
+            <span>Click Card Item To Edit</span>
         </section>
     )
-
-    const editMember = e => {
-        console.log(e.target)
-    }
 
     return (
         <Card
@@ -23,7 +19,7 @@ const TeamMember = (props) => {
             meta={props.role}
             description={props.about}
             extra={extra}
-            onClick={editMember}
+            onClick={props.editMember}
         />
     )
 }

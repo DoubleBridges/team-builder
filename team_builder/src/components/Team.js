@@ -5,6 +5,10 @@ import { Card } from 'semantic-ui-react';
 
 const Team = (props) => {
 
+  const editMember = e => {
+    console.log(e.target.textContent)
+  }
+
   const createTeam = props.members.map((member, i) => {
 
     return (
@@ -15,7 +19,7 @@ const Team = (props) => {
         role={member.role}
         about={member.about}
         favLang={member.favLang}
-        link="link"
+        editMember={editMember}
       />
     )
   })
